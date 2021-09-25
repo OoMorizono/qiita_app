@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('articles',ArticleController::class);
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
