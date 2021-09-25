@@ -1,0 +1,10 @@
+### 一覧画面取得
+GET /api/v2/tags/php/items HTTP/1.1
+Host: qiita.com
+Authorization: Bearer 94bf8a88a46dc12e049c2026c10bdb707a4ff0b3
+
+### 詳細画面取得
+GET /api/v2/items/6931d873738b71dd7959 HTTP/1.1
+Host: qiita.com
+Authorization: Bearer 94bf8a88a46dc12e049c2026c10bdb707a4ff0b3
+
