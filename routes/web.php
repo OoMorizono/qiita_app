@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', [ArticleController::class, 'index']);
 
@@ -31,3 +31,6 @@ Route::redirect('/', route('articles.index'), 302);
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/bs/index',  function(){
+    return view('bs.index');
+});

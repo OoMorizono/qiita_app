@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
+@section('content')
     @if (!empty($errors))
     <div class="error">
         @foreach($errors->all() as $error)
@@ -36,9 +28,7 @@
             <textarea name="body" id="body" cols="30" rows="10" placeholder="エンジニアに関わる知識をMarkdown記法で書いて共有しよう"
                 required>{{ $article->body }}</textarea>
         </div>
-        <input type="submit" value="更新する">
+        <input type="submit" value="更新する" class="btn btn-outline-primary">
     </form>
-    <button type="button" onclick="location.href='{{ route('articles.index') }}'">一覧へ戻る</button>
-</body>
-
-</html>
+    <button type="button" onclick="location.href='{{ route('articles.index') }}'" class="btn btn-outline-danger">一覧へ戻る</button>
+@endsection
